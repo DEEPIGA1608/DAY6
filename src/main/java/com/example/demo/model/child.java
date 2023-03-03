@@ -1,0 +1,79 @@
+package com.example.demo.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "day6")
+public class child {
+	@Id
+	@Column(name="babyid")
+    private int babyid;
+	@Column(name="babyFirstName")
+    private String babyFirstName;
+	@Column(name="babyLastName")
+	private String babyLastName;
+	@Column(name="fatherName")
+	private String fatherName;
+	@Column(name="motherName")
+	private String motherName;
+	@Column(name="address")
+	private String address;
+	public int getBabyid() {
+		return babyid;
+	}
+
+	public void setBabyid(int babyid) {
+		this.babyid = babyid;
+	}
+	public String getBabyFirstName() {
+		return babyFirstName;
+	}
+	public void setBabyFirstName(String babyFirstName) {
+		this.babyFirstName = babyFirstName;
+	}
+	public String getBabyLastName() {
+		return babyLastName;
+	}
+
+	public void setBabyLastName(String babyLastName) {
+		this.babyLastName = babyLastName;
+	}
+	public String getFatherName() {
+		return fatherName;
+	}
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
+	}
+	public String getMotherName() {
+		return motherName;
+	}
+	public void setMotherName(String motherName) {
+		this.motherName = motherName;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public child(int babyid, String babyFirstName, String babyLastName, String fatherName, String motherName,
+			String address) {
+		super();
+		this.babyid = babyid;
+		this.babyFirstName = babyFirstName;
+		this.babyLastName = babyLastName;
+		this.fatherName = fatherName;
+		this.motherName = motherName;
+		this.address = address;
+	}
+	public child() {
+		
+	}
+
+	public String toString() {
+		return "babyid="+babyid+"fathername="+fatherName+"address="+address;
+	}
+}
